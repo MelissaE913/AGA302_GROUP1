@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ee98d3cc80ffaf49b29a474e6def692, type: 3}
   m_Name: BabyShark
   m_EditorClassIdentifier: 
-  songName: Baby Shark
+  songName: Baby Shark Redux
   artist: 
   duration: 30
   musicClip: {fileID: 8300000, guid: 0bf57bb18ce0a8143b10cdb19995919e, type: 3}
