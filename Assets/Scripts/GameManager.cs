@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
 
     public enum GamePhases
     {
-        StartPhase, PlayPhase
+        StartPhase, LevelSelect, PlayPhase
     }
 
     public GamePhases currentGamePhase = GamePhases.StartPhase;
@@ -32,7 +32,35 @@ public class GameManager : MonoBehaviour
     {
         StartCurrentPhaseBehavior();
     }
+    // Update is called once per frame
+    void Update()
+    {
+        switch (currentGamePhase)
+        {
+            case GamePhases.PlayPhase:
 
+                if (Input.anyKeyDown)
+                {
+                    BeatScroller theBS = GameObject.FindObjectOfType<BeatScroller>();
+                    if (theBS != null)
+                    {
+                        if (theBS.hasStarted == false)
+                        {
+                            theBS.hasStarted = true;
+                            GameObject musicObject = GameObject.FindGameObjectWithTag("MusicAudioSource");
+                            AudioSource theMusic = musicObject.GetComponent<AudioSource>();
+                            if (theMusic != null) { theMusic.Play(); }
+                        }
+                    }
+
+                }
+                break;
+            case GamePhases.StartPhase:
+                break;
+            case GamePhases.LevelSelect:
+                break;
+        }
+    }
     public void SetNextPhase(GamePhases nextPhase)
     {
         EndCurrentPhaseBehavior();
@@ -54,11 +82,15 @@ public class GameManager : MonoBehaviour
                 OnUnPaused();
                 break;
             case GamePhases.PlayPhase:
-                SceneManager.LoadScene(1);
-                Debug.Log("Play the music!");
-                AudioManager.instance.PlayMusic(AudioManager.MusicTypes.Gameplay, true);
+                SceneManager.LoadScene(3);
+                //shouldn't play music until the player hits a key
+                //Debug.Log("Play the music!");
+                //AudioManager.instance.PlayMusic(AudioManager.MusicTypes.Gameplay, true);
 
                 OnUnPaused();
+                break;
+            case GamePhases.LevelSelect:
+                SceneManager.LoadScene(1);
                 break;
         }
     }
@@ -91,4 +123,15 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1f;
     }
+
+    #region RHYTHM GAME METHODS
+    public void NoteHit()
+    {
+        Debug.Log("Hit On Time");
+    }
+    public void NoteMissed()
+    {
+        Debug.Log("Missed Note");
+    }
+    #endregion
 }

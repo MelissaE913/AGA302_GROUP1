@@ -57,4 +57,13 @@ public class LevelSelectPanel : MonoBehaviour
             }
         }
     }
+
+    public void OnReturnToStartScreenPressed()
+    {
+        GameManager.instance.SetNextPhase(GameManager.GamePhases.StartPhase);
+    }
+    public void OnSongSelectionConfirmed()
+    {
+        GameManager.instance.SetNextPhase(GameManager.GamePhases.PlayPhase);
+    }
 }

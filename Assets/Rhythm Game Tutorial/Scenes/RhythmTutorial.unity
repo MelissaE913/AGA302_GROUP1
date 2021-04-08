@@ -425,12 +425,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 294516840}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bc665cd7852fd848a7aaacc18fc32a9, type: 3}
+  m_Script: {fileID: 11500000, guid: 5b48e68fa339b064bb1bfe2d20bae786, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theMusic: {fileID: 515992357}
-  startPlaying: 0
-  theBS: {fileID: 280668580}
+  currentGamePhase: 1
 --- !u!4 &294516842
 Transform:
   m_ObjectHideFlags: 0
@@ -959,7 +957,7 @@ GameObject:
   - component: {fileID: 515992357}
   m_Layer: 0
   m_Name: Audio Track
-  m_TagString: Untagged
+  m_TagString: MusicAudioSource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
