@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
 
     public enum GamePhases
     {
-        StartPhase, LevelSelect, PlayPhase
+        StartPhase, LevelSelect, PlayPhase, TutorialPlayPhase
     }
 
     public GamePhases currentGamePhase = GamePhases.StartPhase;
@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
         switch (currentGamePhase)
         {
             case GamePhases.PlayPhase:
-
+            case GamePhases.TutorialPlayPhase:
                 if (Input.anyKeyDown)
                 {
                     BeatScroller theBS = GameObject.FindObjectOfType<BeatScroller>();
@@ -82,7 +82,7 @@ public class GameManager : MonoBehaviour
                 OnUnPaused();
                 break;
             case GamePhases.PlayPhase:
-                SceneManager.LoadScene(3);
+                SceneManager.LoadScene(4);
                 //shouldn't play music until the player hits a key
                 //Debug.Log("Play the music!");
                 //AudioManager.instance.PlayMusic(AudioManager.MusicTypes.Gameplay, true);
@@ -91,6 +91,9 @@ public class GameManager : MonoBehaviour
                 break;
             case GamePhases.LevelSelect:
                 SceneManager.LoadScene(1);
+                break;
+            case GamePhases.TutorialPlayPhase:
+                SceneManager.LoadScene(3);
                 break;
         }
     }
@@ -112,7 +115,7 @@ public class GameManager : MonoBehaviour
 
     public void OnPlayQuitPressed()
     {
-        SetNextPhase(GamePhases.StartPhase);
+        SetNextPhase(GamePhases.LevelSelect);
     }
 
     public void OnPaused()
