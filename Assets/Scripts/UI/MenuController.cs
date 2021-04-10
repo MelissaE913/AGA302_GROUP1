@@ -19,6 +19,22 @@ public class MenuController : MonoBehaviour
         }
     }
 
+    public void OnPlayExitPressed()
+    {
+        if (GameManager.instance != null)
+        {
+            GameManager.instance.OnPlayExitPressed();
+        }
+    }
+
+    public void OnPlayOptionsPressed()
+    {
+        if (GameManager.instance != null)
+        {
+            GameManager.instance.OnPlayOptionsPressed();
+        }
+    }
+
     public void TriggerPause(bool isPaused)
     {
         if (GameManager.instance != null)

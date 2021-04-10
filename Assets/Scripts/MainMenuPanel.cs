@@ -8,6 +8,18 @@ public class MainMenuPanel : MenuPanel
     {
         GameManager.instance.SetNextPhase(GameManager.GamePhases.LevelSelect);
     }
-    public void OnOptionsPressed() { }
+    public void OnOptionsPressed() 
+    {
+        GameManager.instance.SetNextPhase(GameManager.GamePhases.OptionsPhase);
+    }
+
+    public void OnPlayOptionsPressed()
+    {
+        if (GameManager.instance != null)
+        {
+            GameManager.instance.OnPlayOptionsPressed();
+        }
+    }
+
     public void OnCreditsPressed() { }
 }
