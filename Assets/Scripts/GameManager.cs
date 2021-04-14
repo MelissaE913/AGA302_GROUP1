@@ -16,6 +16,21 @@ public class GameManager : MonoBehaviour
     public GamePhases currentGamePhase = GamePhases.StartPhase;
 
 
+    #region RHYTHM GAME VARIABLES
+    public int currentScore;
+    public int currentMultiplier;
+    public int multiplierTracker;
+    public int[] multiplierThresholds;
+    public int scorePerNote = 100;
+    public int scorePerPerfectNote = 150;
+    public int scorePerGoodNote = 125;
+    
+    //TODO: Make something in rhythm scene get updated text values
+    //public Text scoreText;
+    //public Text multiText;
+    #endregion
+
+
     private void Awake()
     {
         if (instance == null)
@@ -144,10 +159,27 @@ public class GameManager : MonoBehaviour
     public void NoteHit()
     {
         Debug.Log("Hit On Time");
+        currentScore += scorePerNote * currentMultiplier;
+        if (currentMultiplier - 1 < multiplierThresholds.Length)
+        {
+            multiplierTracker++;
+            if (multiplierThresholds[currentMultiplier - 1] <= multiplierTracker)
+            {
+                multiplierTracker = 0;
+                currentMultiplier++;
+            }
+        }
+        //TODO - Make something in the rhythm game scene receive update
+        //multiText.text = "Multiplier: x" + currentMultiplier;
+        //scoreText.text = "Score: " + currentScore;
     }
     public void NoteMissed()
     {
         Debug.Log("Missed Note");
+        currentMultiplier = 1;
+        multiplierTracker = 0;
+        //TODO - Make something in the rhythm game scene receive update
+        //multiText.text = "Multiplier: x" + currentMultiplier;
     }
     #endregion
 }

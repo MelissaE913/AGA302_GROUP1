@@ -428,7 +428,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b48e68fa339b064bb1bfe2d20bae786, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentGamePhase: 3
+  currentGamePhase: 2
+  currentScore: 0
+  currentMultiplier: 0
+  multiplierTracker: 0
+  multiplierThresholds: 
+  scorePerNote: 100
+  scorePerPerfectNote: 150
+  scorePerGoodNote: 125
 --- !u!4 &294516842
 Transform:
   m_ObjectHideFlags: 0
@@ -957,7 +964,7 @@ GameObject:
   - component: {fileID: 515992357}
   m_Layer: 0
   m_Name: Audio Track
-  m_TagString: MusicAudioSource
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2230,7 +2237,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1605572179
 MonoBehaviour:
   m_ObjectHideFlags: 0

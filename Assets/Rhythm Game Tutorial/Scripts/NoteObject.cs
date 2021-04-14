@@ -27,23 +27,21 @@ public class NoteObject : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.tag == "Activator")
+        void OnTriggerEnter2D(Collider2D other)
         {
-            canBePressed = true;
-        }
-    }
-
-    void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.tag == "Activator")
-        {
-            canBePressed = false;
-            if (gameObject.activeSelf == true)
+            if (other.tag == "Activator")
             {
-                GameManager.instance.NoteMissed();
+                canBePressed = true;
             }
         }
-    }
+
+        void OnTriggerExit2D(Collider2D other)
+        {
+            if (other.tag == "Activator")
+            {
+                canBePressed = false;
+            GameManager.instance.NoteMissed();
+        }
+        }
+    
 }
