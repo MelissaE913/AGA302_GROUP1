@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
 
     public enum GamePhases
     {
-        StartPhase, LevelSelect, PlayPhase, TutorialPlayPhase, OptionsPhase
+        StartPhase, LevelSelect, PlayPhase, TutorialPlayPhase, OptionsPhase, ResultsPhase
     }
 
     public GamePhases currentGamePhase = GamePhases.StartPhase;
@@ -74,6 +74,8 @@ public class GameManager : MonoBehaviour
                 break;
             case GamePhases.LevelSelect:
                 break;
+            case GamePhases.ResultsPhase:
+                break;
         }
     }
     public void SetNextPhase(GamePhases nextPhase)
@@ -113,6 +115,9 @@ public class GameManager : MonoBehaviour
             case GamePhases.OptionsPhase:
                 SceneManager.LoadScene(2);
                 break;
+            case GamePhases.ResultsPhase:
+                SceneManager.LoadScene(5);
+                break;
         }
     }
     void EndCurrentPhaseBehavior()
@@ -145,6 +150,12 @@ public class GameManager : MonoBehaviour
     {
         SetNextPhase(GamePhases.OptionsPhase);
     }
+
+    public void OnLevelComplete()
+    {
+        SetNextPhase(GamePhases.ResultsPhase);
+    }
+
 
     public void OnPaused()
     {
