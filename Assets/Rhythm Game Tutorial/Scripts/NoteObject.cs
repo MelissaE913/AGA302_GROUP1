@@ -5,8 +5,8 @@ using UnityEngine;
 public class NoteObject : MonoBehaviour
 {
     public bool canBePressed;
-    public KeyCode keyToPress; 
-
+    public KeyCode keyToPress;
+    public GameObject hitEffect, goodEffect, perfectEffect, missEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +22,23 @@ public class NoteObject : MonoBehaviour
             if (canBePressed)
             {
                 gameObject.SetActive(false);
-                GameManager.instance.NoteHit();
+               // GameManager.instance.NoteHit();
+               if (Mathf.Abs(transform.position.y) > 0.25)
+                {
+                    Instantiate(hitEffect, transform.position, hitEffect.transform.rotation);
+                    Debug.Log("Hit");
+                    GameManager.instance.NormalHit();
+                } else if (Mathf.Abs(transform.position.y) > 0.05f)
+                {
+                    Instantiate(goodEffect, transform.position, goodEffect.transform.rotation);
+                    Debug.Log("Good");
+                    GameManager.instance.GoodHit();
+                } else
+                {
+                    Instantiate(perfectEffect, transform.position, perfectEffect.transform.rotation);
+                    Debug.Log("Perfect");
+                    GameManager.instance.PerfectHit();
+                }
             }
         }
     }
@@ -41,6 +57,8 @@ public class NoteObject : MonoBehaviour
             {
                 canBePressed = false;
             GameManager.instance.NoteMissed();
+            Instantiate(missEffect, transform.position, missEffect.transform.rotation);
+
         }
         }
     

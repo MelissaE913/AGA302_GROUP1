@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     public int scorePerNote = 100;
     public int scorePerPerfectNote = 150;
     public int scorePerGoodNote = 125;
-    
+
     //TODO: Make something in rhythm scene get updated text values
     //public Text scoreText;
     //public Text multiText;
@@ -191,6 +191,18 @@ public class GameManager : MonoBehaviour
         multiplierTracker = 0;
         //TODO - Make something in the rhythm game scene receive update
         //multiText.text = "Multiplier: x" + currentMultiplier;
+    }
+    public void NormalHit()
+    {
+        currentScore += scorePerNote * currentMultiplier;
+    }
+    public void GoodHit()
+    {
+        currentScore += scorePerNote * currentMultiplier;
+    }
+    public void PerfectHit()
+    {
+        currentScore += scorePerNote * currentMultiplier;
     }
     #endregion
 }
