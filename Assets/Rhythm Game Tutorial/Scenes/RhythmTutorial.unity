@@ -428,7 +428,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b48e68fa339b064bb1bfe2d20bae786, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentGamePhase: 0
+  currentGamePhase: 3
   currentScore: 0
   currentMultiplier: 1
   multiplierTracker: 0
@@ -436,6 +436,19 @@ MonoBehaviour:
   scorePerNote: 100
   scorePerPerfectNote: 150
   scorePerGoodNote: 125
+  totalNotes: 0
+  normalHits: 0
+  goodHits: 0
+  perfectHits: 0
+  missedHiits: 0
+  resultsScreen: {fileID: 0}
+  percentHit: {fileID: 0}
+  normalsText: {fileID: 0}
+  goodText: {fileID: 0}
+  perfectText: {fileID: 0}
+  missText: {fileID: 0}
+  rankText: {fileID: 0}
+  finalScoreText: {fileID: 0}
 --- !u!4 &294516842
 Transform:
   m_ObjectHideFlags: 0
