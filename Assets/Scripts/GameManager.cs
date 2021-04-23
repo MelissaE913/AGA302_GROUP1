@@ -81,7 +81,7 @@ public class GameManager : MonoBehaviour
                         {
                            /// if(!theMusic.isPlaying && !resultsScreen.activeInHiearchy)
                             {
-                                ///   resultsScreen.SetActive(true); im gonna have justin look at this. idk how to implement this beyond the tutorial
+                                ///   resultsScreen.SetActive(true); im gonna have justin look at this. idk how to implement this beyond the tutorial.
                                 ///  normals.text = "" + normalHits;
                                 ///  goodsText.text = goodhits.ToString();
                                 ///   perfectsText.text = perfecthits.ToString();
