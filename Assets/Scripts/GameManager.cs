@@ -62,9 +62,13 @@ public class GameManager : MonoBehaviour
                         if (theBS.hasStarted == false)
                         {
                             theBS.hasStarted = true;
+
                             GameObject musicObject = GameObject.FindGameObjectWithTag("MusicAudioSource");
-                            AudioSource theMusic = musicObject.GetComponent<AudioSource>();
-                            if (theMusic != null) { theMusic.Play(); }
+                            if (musicObject)
+                            {
+                                AudioSource theMusic = musicObject.GetComponent<AudioSource>();
+                                if (theMusic != null) { theMusic.Play(); }
+                            }
                         }
                     }
 
