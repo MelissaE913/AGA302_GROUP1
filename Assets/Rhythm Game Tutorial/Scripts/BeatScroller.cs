@@ -7,6 +7,7 @@ public class BeatScroller : MonoBehaviour
 
     public float beatTempo;
     public bool hasStarted;
+    //public Vector3 scrollDirection = Vector3.down;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +24,8 @@ public class BeatScroller : MonoBehaviour
         }
         else
         {
-            transform.position -= new Vector3(0f, beatTempo * Time.deltaTime, 0); 
+            Vector3 dir = transform.up * -1f; //move down RELATIVE to rotoation
+            transform.position += dir * (beatTempo * Time.deltaTime);//new Vector3(0f, beatTempo * Time.deltaTime, 0); 
         }
     }
 }
