@@ -781,7 +781,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4374245671115628889, guid: b6d7ad41ddf8a864494393d197e792c0, type: 3}
       propertyPath: m_Name
-      value: PF_LevelLayout_VERTICAL
+      value: PF_LevelLayout_HORIZONTAL
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6d7ad41ddf8a864494393d197e792c0, type: 3}

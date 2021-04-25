@@ -72,6 +72,7 @@ public class LevelSelectPanel : MonoBehaviour
     }
     public void OnSongSelectionConfirmed()
     {
+        GameManager.instance.ReportSelectedSong(currentSongInfo);
         GameManager.instance.SetNextPhase(GameManager.GamePhases.PlayPhase);
     }
 }
