@@ -9,4 +9,5 @@ public class SongInfo : ScriptableObject
     public string artist;
     public float duration;
     public AudioClip musicClip;
+    public Sprite albumCover;
 }
