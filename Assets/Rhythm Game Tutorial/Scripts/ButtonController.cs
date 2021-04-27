@@ -8,6 +8,10 @@ public class ButtonController : MonoBehaviour
     public Sprite defaultImage;
     public Sprite pressedImage;
 
+    public Color defaultColor = Color.white;
+    public Color pressedColor = Color.white;
+
+
     public KeyCode keyToPress;
 
 
@@ -23,11 +27,13 @@ public class ButtonController : MonoBehaviour
         if (Input.GetKeyDown(keyToPress))
         {
             theSR.sprite = pressedImage;
+            theSR.color = pressedColor;
         }
 
         if (Input.GetKeyUp(keyToPress))
         {
             theSR.sprite = defaultImage;
+            theSR.color = defaultColor;
         }
     }
 }
