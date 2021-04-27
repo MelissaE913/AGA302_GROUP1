@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -25,7 +26,14 @@ public class GameManager : MonoBehaviour
     public int scorePerPerfectNote = 150;
     public int scorePerGoodNote = 125;
 
-    public SongInfo selectedSong;
+    public float totalNotes;
+    public float normalHits;
+    public float goodHits;
+    public float perfectHits;
+    public float missedHiits;
+
+    public GameObject resultsScreen;
+    public Text percentHit, normalsText, goodText, perfectText, missText, rankText, finalScoreText;
 
     //TODO: Make something in rhythm scene get updated text values
     //public Text scoreText;
@@ -48,6 +56,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         StartCurrentPhaseBehavior();
+        totalNotes = FindObjectsOfType<NoteObject>().Length;
     }
     // Update is called once per frame
     void Update()
@@ -64,17 +73,51 @@ public class GameManager : MonoBehaviour
                         if (theBS.hasStarted == false)
                         {
                             theBS.hasStarted = true;
-
                             GameObject musicObject = GameObject.FindGameObjectWithTag("MusicAudioSource");
-                            if (musicObject)
+                            AudioSource theMusic = musicObject.GetComponent<AudioSource>();
+                            if (theMusic != null) { theMusic.Play(); }
+                        }
+                        ///else
+                        {
+                           /// if(!theMusic.isPlaying && !resultsScreen.activeInHiearchy)
                             {
-                                AudioSource musicAudioSource = musicObject.GetComponent<AudioSource>();
-                                if (musicAudioSource != null)
-                                {
-                                    if(selectedSong) musicAudioSource.clip = selectedSong.musicClip;
-                                    musicAudioSource.Play();
-                                }
+                                ///   resultsScreen.SetActive(true); im gonna have justin look at this. idk how to implement this beyond the tutorial.
+                                ///  normals.text = "" + normalHits;
+                                ///  goodsText.text = goodhits.ToString();
+                                ///   perfectsText.text = perfecthits.ToString();
+                                ///    missesText.text = misshits.ToString();
+                                ///    floot totalHit = normalHits + goodHits + perfectHits;
+                                ///    float percentHit = ( totalHit / totalNotes) * 100f;
+                                ///    percentHitText.text = percentHit.ToString("F1") + %;
+                                ///    string rankVal = F
+                                ///    f (percentHit > 40)
+                                //{
+                                   // rankVal = D;
+                                   // if (percentHit > 55)
+                                  //  {
+                                      //  rankVal = C;
+                                    //    if { percentHit > 70}
+                                       // {
+                                         //   rankVal = B;
+                                           // if (percentHit > 85)
+                                            //{
+                                              //  rankVal = A;
+                                               // if (percentHit > 95)
+                                               // {
+                                                //    rankVal = S;
+                                               // }
+                                           // }
+                                        // }
+                                   // }
+                               // }
+                                ///    rankText.text = rankValue;
+                                ///    
+                                /// finalScoreText.text = currentScore.ToString();
+                                ///    
+                                ///   
+                                ///    
                             }
+
                         }
                     }
 
@@ -199,26 +242,24 @@ public class GameManager : MonoBehaviour
         Debug.Log("Missed Note");
         currentMultiplier = 1;
         multiplierTracker = 0;
+        missedHiits++;
         //TODO - Make something in the rhythm game scene receive update
         //multiText.text = "Multiplier: x" + currentMultiplier;
     }
     public void NormalHit()
     {
         currentScore += scorePerNote * currentMultiplier;
+        normalHits++;
     }
     public void GoodHit()
     {
         currentScore += scorePerNote * currentMultiplier;
+        goodHits++;
     }
     public void PerfectHit()
     {
         currentScore += scorePerNote * currentMultiplier;
+        perfectHits++;
     }
-
-    public void ReportSelectedSong(SongInfo song)
-    {
-        selectedSong = song;
-    }
-
     #endregion
 }

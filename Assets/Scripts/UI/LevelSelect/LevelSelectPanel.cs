@@ -10,7 +10,6 @@ public class LevelSelectPanel : MonoBehaviour
     public SongInfo currentSongInfo;
     public int currentDifficultyLevel;
     public Button playLevelButton;
-    public Image playButtonActionIcon;
 
     public Button[] difficultyButtons;
     public Color difficultyActiveColor;
@@ -44,14 +43,7 @@ public class LevelSelectPanel : MonoBehaviour
                 SongSelectionText.text = "";
         }
         bool isInteractable = (currentDifficultyLevel > 0) && (currentSongInfo != null);
-
-        if (currentSongInfo)
-            playLevelButton.image.sprite = currentSongInfo.albumCover;
-        else
-            playLevelButton.image.sprite = null;
-
         playLevelButton.interactable = isInteractable;
-        playButtonActionIcon.enabled = isInteractable;
 
         for (int i = 0; i < difficultyButtons.Length; i++)
         {
@@ -72,7 +64,6 @@ public class LevelSelectPanel : MonoBehaviour
     }
     public void OnSongSelectionConfirmed()
     {
-        GameManager.instance.ReportSelectedSong(currentSongInfo);
         GameManager.instance.SetNextPhase(GameManager.GamePhases.PlayPhase);
     }
 }
