@@ -24,9 +24,7 @@ public class GameManager : MonoBehaviour
     public int scorePerNote = 100;
     public int scorePerPerfectNote = 150;
     public int scorePerGoodNote = 125;
-
-    public SongInfo selectedSong;
-
+    
     //TODO: Make something in rhythm scene get updated text values
     //public Text scoreText;
     //public Text multiText;
@@ -64,17 +62,9 @@ public class GameManager : MonoBehaviour
                         if (theBS.hasStarted == false)
                         {
                             theBS.hasStarted = true;
-
                             GameObject musicObject = GameObject.FindGameObjectWithTag("MusicAudioSource");
-                            if (musicObject)
-                            {
-                                AudioSource musicAudioSource = musicObject.GetComponent<AudioSource>();
-                                if (musicAudioSource != null)
-                                {
-                                    if(selectedSong) musicAudioSource.clip = selectedSong.musicClip;
-                                    musicAudioSource.Play();
-                                }
-                            }
+                            AudioSource theMusic = musicObject.GetComponent<AudioSource>();
+                            if (theMusic != null) { theMusic.Play(); }
                         }
                     }
 
@@ -202,23 +192,5 @@ public class GameManager : MonoBehaviour
         //TODO - Make something in the rhythm game scene receive update
         //multiText.text = "Multiplier: x" + currentMultiplier;
     }
-    public void NormalHit()
-    {
-        currentScore += scorePerNote * currentMultiplier;
-    }
-    public void GoodHit()
-    {
-        currentScore += scorePerNote * currentMultiplier;
-    }
-    public void PerfectHit()
-    {
-        currentScore += scorePerNote * currentMultiplier;
-    }
-
-    public void ReportSelectedSong(SongInfo song)
-    {
-        selectedSong = song;
-    }
-
     #endregion
 }

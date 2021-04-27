@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -246,13 +246,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentGamePhase: 1
-  currentScore: 0
-  currentMultiplier: 0
-  multiplierTracker: 0
-  multiplierThresholds: 
-  scorePerNote: 100
-  scorePerPerfectNote: 150
-  scorePerGoodNote: 125
 --- !u!4 &883178220
 Transform:
   m_ObjectHideFlags: 0
