@@ -25,6 +25,13 @@ public class GameManager : MonoBehaviour
     public int scorePerPerfectNote = 150;
     public int scorePerGoodNote = 125;
 
+    public float totalNotes;
+    public float normalHits;
+    public float goodHits;
+    public float perfectHits;
+    public float missedHiits;
+    public string rankVal = "";
+
     public SongInfo selectedSong;
 
     //TODO: Make something in rhythm scene get updated text values
@@ -32,6 +39,10 @@ public class GameManager : MonoBehaviour
     //public Text multiText;
     #endregion
 
+    public void ReportSelectedSong(SongInfo song)
+    {
+        selectedSong = song;
+    }
 
     private void Awake()
     {
@@ -71,7 +82,7 @@ public class GameManager : MonoBehaviour
                                 AudioSource musicAudioSource = musicObject.GetComponent<AudioSource>();
                                 if (musicAudioSource != null)
                                 {
-                                    if(selectedSong) musicAudioSource.clip = selectedSong.musicClip;
+                                    if (selectedSong) musicAudioSource.clip = selectedSong.musicClip;
                                     musicAudioSource.Play();
                                 }
                             }
@@ -130,13 +141,17 @@ public class GameManager : MonoBehaviour
                 break;
         }
     }
+
+
     void EndCurrentPhaseBehavior()
     {
         switch (currentGamePhase)
         {
             case GamePhases.StartPhase:
                 break;
+            case GamePhases.TutorialPlayPhase:
             case GamePhases.PlayPhase:
+                SetResultsScreenValues();
                 break;
         }
     }
@@ -177,6 +192,48 @@ public class GameManager : MonoBehaviour
     }
 
     #region RHYTHM GAME METHODS
+
+    void SetResultsScreenValues()
+    {
+        /*
+        resultsScreen.SetActive(true); 
+        normals.text = "" + normalHits;
+        goodsText.text = goodhits.ToString();
+        perfectsText.text = perfecthits.ToString();
+        missesText.text = misshits.ToString();
+        */
+        float totalHit = normalHits + goodHits + perfectHits;
+
+        float percentHit = (totalHit / totalNotes) * 100f;
+        //percentHitText.text = percentHit.ToString("F1") + "%";
+
+        rankVal = "F";
+        if (percentHit > 40)
+        {
+            rankVal = "D";
+            if (percentHit > 55)
+            {
+                rankVal = "C";
+            }
+            if (percentHit > 70)
+            {
+                rankVal = "B";
+            }
+            if (percentHit > 85)
+            {
+                rankVal = "A";
+            }
+            if (percentHit > 95)
+            {
+                rankVal = "S";
+            }
+        }
+        //rankText.text = rankValue;  
+        //finalScoreText.text = currentScore.ToString();
+    }
+
+
+
     public void NoteHit()
     {
         Debug.Log("Hit On Time");
@@ -199,25 +256,24 @@ public class GameManager : MonoBehaviour
         Debug.Log("Missed Note");
         currentMultiplier = 1;
         multiplierTracker = 0;
+        missedHiits++;
         //TODO - Make something in the rhythm game scene receive update
         //multiText.text = "Multiplier: x" + currentMultiplier;
     }
     public void NormalHit()
     {
         currentScore += scorePerNote * currentMultiplier;
+        normalHits++;
     }
     public void GoodHit()
     {
         currentScore += scorePerNote * currentMultiplier;
+        goodHits++;
     }
     public void PerfectHit()
     {
         currentScore += scorePerNote * currentMultiplier;
-    }
-
-    public void ReportSelectedSong(SongInfo song)
-    {
-        selectedSong = song;
+        perfectHits++;
     }
 
     #endregion
