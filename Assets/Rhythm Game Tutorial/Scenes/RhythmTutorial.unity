@@ -430,9 +430,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentGamePhase: 3
   currentScore: 0
-  currentMultiplier: 1
+  currentMultiplier: 0
   multiplierTracker: 0
-  multiplierThresholds: 040000000800000010000000
+  multiplierThresholds: 
   scorePerNote: 100
   scorePerPerfectNote: 150
   scorePerGoodNote: 125
@@ -511,10 +511,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBePressed: 0
   keyToPress: 274
-  hitEffect: {fileID: 5569666758386983100, guid: 385acb3ea36c9e0408e7e6bd19803dc1, type: 3}
-  goodEffect: {fileID: 2416892182775721492, guid: 93a9f7c5a810c1349a3c362bf4b9607d, type: 3}
-  perfectEffect: {fileID: 7744954063827632167, guid: f4ad4ee53343297499681b2974b43e79, type: 3}
-  missEffect: {fileID: 8768379159205093994, guid: 1e3019706feba2f418f4f6ed8b83cda5, type: 3}
 --- !u!58 &316611413
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1292,10 +1288,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBePressed: 0
   keyToPress: 276
-  hitEffect: {fileID: 5569666758386983100, guid: 385acb3ea36c9e0408e7e6bd19803dc1, type: 3}
-  goodEffect: {fileID: 2416892182775721492, guid: 93a9f7c5a810c1349a3c362bf4b9607d, type: 3}
-  perfectEffect: {fileID: 7744954063827632167, guid: f4ad4ee53343297499681b2974b43e79, type: 3}
-  missEffect: {fileID: 8768379159205093994, guid: 1e3019706feba2f418f4f6ed8b83cda5, type: 3}
 --- !u!58 &582069162
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1703,10 +1695,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBePressed: 0
   keyToPress: 273
-  hitEffect: {fileID: 5569666758386983100, guid: 385acb3ea36c9e0408e7e6bd19803dc1, type: 3}
-  goodEffect: {fileID: 2416892182775721492, guid: 93a9f7c5a810c1349a3c362bf4b9607d, type: 3}
-  perfectEffect: {fileID: 7744954063827632167, guid: f4ad4ee53343297499681b2974b43e79, type: 3}
-  missEffect: {fileID: 8768379159205093994, guid: 1e3019706feba2f418f4f6ed8b83cda5, type: 3}
 --- !u!58 &796552182
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2460,11 +2448,11 @@ RectTransform:
   m_Father: {fileID: 1605572182}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -645, y: -376}
   m_SizeDelta: {x: 560.4, y: 164.6}
-  m_Pivot: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1791990394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3176,10 +3164,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBePressed: 0
   keyToPress: 275
-  hitEffect: {fileID: 5569666758386983100, guid: 385acb3ea36c9e0408e7e6bd19803dc1, type: 3}
-  goodEffect: {fileID: 2416892182775721492, guid: 93a9f7c5a810c1349a3c362bf4b9607d, type: 3}
-  perfectEffect: {fileID: 7744954063827632167, guid: f4ad4ee53343297499681b2974b43e79, type: 3}
-  missEffect: {fileID: 8768379159205093994, guid: 1e3019706feba2f418f4f6ed8b83cda5, type: 3}
 --- !u!58 &2040327108
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3293,11 +3277,11 @@ RectTransform:
   m_Father: {fileID: 1605572182}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 164.6}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -645, y: -432}
   m_SizeDelta: {x: 560.4, y: 164.6}
-  m_Pivot: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2046179001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3453,10 +3437,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBePressed: 0
   keyToPress: 276
-  hitEffect: {fileID: 5569666758386983100, guid: 385acb3ea36c9e0408e7e6bd19803dc1, type: 3}
-  goodEffect: {fileID: 2416892182775721492, guid: 93a9f7c5a810c1349a3c362bf4b9607d, type: 3}
-  perfectEffect: {fileID: 7744954063827632167, guid: f4ad4ee53343297499681b2974b43e79, type: 3}
-  missEffect: {fileID: 8768379159205093994, guid: 1e3019706feba2f418f4f6ed8b83cda5, type: 3}
 --- !u!58 &2088797143
 CircleCollider2D:
   m_ObjectHideFlags: 0
