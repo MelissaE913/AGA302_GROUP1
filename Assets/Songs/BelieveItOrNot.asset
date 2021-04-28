@@ -17,3 +17,4 @@ MonoBehaviour:
   duration: 60
   musicClip: {fileID: 8300000, guid: 931d516e4faaec04bb48ec607ae0f567, type: 3}
   albumCover: {fileID: 21300000, guid: 5b1c7c56b61dd9a43af960b752ad468a, type: 3}
+  songNotesPrefab: {fileID: 2640351638960208948, guid: 8407f04d0844a704e8704739f3d13c2d, type: 3}

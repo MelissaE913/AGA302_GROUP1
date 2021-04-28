@@ -565,6 +565,13 @@ MonoBehaviour:
   scorePerNote: 100
   scorePerPerfectNote: 150
   scorePerGoodNote: 125
+  totalNotes: 0
+  normalHits: 0
+  goodHits: 0
+  perfectHits: 0
+  missedHiits: 0
+  rankVal: 
+  selectedSong: {fileID: 0}
 --- !u!4 &510893670
 Transform:
   m_ObjectHideFlags: 0

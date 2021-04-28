@@ -10,4 +10,5 @@ public class SongInfo : ScriptableObject
     public float duration;
     public AudioClip musicClip;
     public Sprite albumCover;
+    public GameObject songNotesPrefab;
 }
