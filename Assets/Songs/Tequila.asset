@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7ee98d3cc80ffaf49b29a474e6def692, type: 3}
-  m_Name: BelieveItOrNot
+  m_Name: Tequila
   m_EditorClassIdentifier: 
-  songName: Believe It Or Not
-  artist: 
-  duration: 60
-  musicClip: {fileID: 8300000, guid: 931d516e4faaec04bb48ec607ae0f567, type: 3}
-  albumCover: {fileID: 21300000, guid: 5b1c7c56b61dd9a43af960b752ad468a, type: 3}
-  songNotesPrefab: {fileID: 2640351638960208948, guid: 8407f04d0844a704e8704739f3d13c2d, type: 3}
-  bpm: 60
+  songName: Tequila - Longer Title
+  artist: John Wesley Tequila
+  duration: 22
+  musicClip: {fileID: 8300000, guid: de74c4b1c4348fa42899cdf98a5d15e5, type: 3}
+  albumCover: {fileID: 21300000, guid: e11e012230491fb4ca48ad6677c3759e, type: 3}
+  songNotesPrefab: {fileID: 2640351638960208948, guid: adfdfde8608ea664ab089c7a8903319c, type: 3}
+  bpm: 120

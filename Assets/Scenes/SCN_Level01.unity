@@ -790,6 +790,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_LevelLayout_HORIZONTAL
       objectReference: {fileID: 0}
+    - target: {fileID: 4374245672705981547, guid: b6d7ad41ddf8a864494393d197e792c0, type: 3}
+      propertyPath: beatTempo
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 8405388282998528693, guid: b6d7ad41ddf8a864494393d197e792c0, type: 3}
+      propertyPath: DEBUG_songInfo
+      value: 
+      objectReference: {fileID: 11400000, guid: 2de3e7899d9beb64eb12d8caa4d76a1c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6d7ad41ddf8a864494393d197e792c0, type: 3}
 --- !u!1001 &7690535835568420745

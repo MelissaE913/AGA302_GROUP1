@@ -2206,7 +2206,7 @@ MonoBehaviour:
   buttonText: {fileID: 6206913484249387702}
   buttonElement: {fileID: 6206913485231428312}
   buttonImage: {fileID: 6206913485231428313}
-  buttonSongInfo: {fileID: 11400000, guid: f363b991d7364524f92b03c15fefc2b5, type: 2}
+  buttonSongInfo: {fileID: 11400000, guid: 2de3e7899d9beb64eb12d8caa4d76a1c, type: 2}
   levelSelectPanel: {fileID: 6206913485669033683}
 --- !u!1 &6206913485340110352
 GameObject:

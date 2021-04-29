@@ -253,6 +253,13 @@ MonoBehaviour:
   scorePerNote: 100
   scorePerPerfectNote: 150
   scorePerGoodNote: 125
+  totalNotes: 0
+  normalHits: 0
+  goodHits: 0
+  perfectHits: 0
+  missedHiits: 0
+  rankVal: 
+  selectedSong: {fileID: 0}
 --- !u!4 &883178220
 Transform:
   m_ObjectHideFlags: 0
@@ -591,6 +598,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6206913485231428315, guid: 55e28bb797736d84496d9e2e21a3a542, type: 3}
+      propertyPath: buttonSongInfo
+      value: 
+      objectReference: {fileID: 11400000, guid: 2de3e7899d9beb64eb12d8caa4d76a1c, type: 2}
     - target: {fileID: 6206913485669033682, guid: 55e28bb797736d84496d9e2e21a3a542, type: 3}
       propertyPath: m_Pivot.x
       value: 0

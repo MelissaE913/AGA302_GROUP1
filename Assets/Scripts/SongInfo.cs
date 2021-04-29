@@ -11,4 +11,5 @@ public class SongInfo : ScriptableObject
     public AudioClip musicClip;
     public Sprite albumCover;
     public GameObject songNotesPrefab;
+    public int bpm = 120;
 }
