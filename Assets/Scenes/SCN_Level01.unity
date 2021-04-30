@@ -571,7 +571,7 @@ MonoBehaviour:
   perfectHits: 0
   missedHiits: 0
   rankVal: 
-  selectedSong: {fileID: 0}
+  selectedSong: {fileID: 11400000, guid: 4d083519be4e4da4da2bb483805e0681, type: 2}
 --- !u!4 &510893670
 Transform:
   m_ObjectHideFlags: 0
@@ -797,7 +797,7 @@ PrefabInstance:
     - target: {fileID: 8405388282998528693, guid: b6d7ad41ddf8a864494393d197e792c0, type: 3}
       propertyPath: DEBUG_songInfo
       value: 
-      objectReference: {fileID: 11400000, guid: 2de3e7899d9beb64eb12d8caa4d76a1c, type: 2}
+      objectReference: {fileID: 11400000, guid: bbd822e2f3ea6684bbe19be44a279951, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6d7ad41ddf8a864494393d197e792c0, type: 3}
 --- !u!1001 &7690535835568420745
