@@ -2499,6 +2499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beatTempo: 117
+  scrollSpeed: 0
   hasStarted: 0
 --- !u!114 &8405388282998528693
 MonoBehaviour:
