@@ -2498,7 +2498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8311dd8b3f279254aa22d0b68d4896ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  beatTempo: 117
+  beatTempo: 120
   scrollSpeed: 0
   hasStarted: 0
 --- !u!114 &8405388282998528693
