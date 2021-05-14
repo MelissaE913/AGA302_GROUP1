@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee98d3cc80ffaf49b29a474e6def692, type: 3}
+  m_Name: Moose
+  m_EditorClassIdentifier: 
+  songName: Moose
+  artist: Bensound
+  duration: 22
+  musicClip: {fileID: 8300000, guid: 4aac462f31e1c8945b21c9fcb558f9be, type: 3}
+  albumCover: {fileID: 21300000, guid: e11e012230491fb4ca48ad6677c3759e, type: 3}
+  songNotesPrefab: {fileID: 2640351638960208948, guid: 8c656be3bedb41d4890a8f23004e4b07, type: 3}
+  bpm: 120
