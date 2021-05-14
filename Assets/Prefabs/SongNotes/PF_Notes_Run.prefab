@@ -119,6 +119,7 @@ MonoBehaviour:
   perfectEffect: {fileID: 7744954063827632167, guid: f4ad4ee53343297499681b2974b43e79, type: 3}
   missEffect: {fileID: 8768379159205093994, guid: 1e3019706feba2f418f4f6ed8b83cda5, type: 3}
   hasMissed: 0
+  isLastNote: 0
 --- !u!1 &461319518869187506
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,6 +239,7 @@ MonoBehaviour:
   perfectEffect: {fileID: 7744954063827632167, guid: f4ad4ee53343297499681b2974b43e79, type: 3}
   missEffect: {fileID: 8768379159205093994, guid: 1e3019706feba2f418f4f6ed8b83cda5, type: 3}
   hasMissed: 0
+  isLastNote: 0
 --- !u!1 &918530375499306302
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,6 +359,7 @@ MonoBehaviour:
   perfectEffect: {fileID: 7744954063827632167, guid: f4ad4ee53343297499681b2974b43e79, type: 3}
   missEffect: {fileID: 8768379159205093994, guid: 1e3019706feba2f418f4f6ed8b83cda5, type: 3}
   hasMissed: 0
+  isLastNote: 0
 --- !u!1 &1053727419444823381
 GameObject:
   m_ObjectHideFlags: 0
@@ -476,6 +479,7 @@ MonoBehaviour:
   perfectEffect: {fileID: 7744954063827632167, guid: f4ad4ee53343297499681b2974b43e79, type: 3}
   missEffect: {fileID: 8768379159205093994, guid: 1e3019706feba2f418f4f6ed8b83cda5, type: 3}
   hasMissed: 0
+  isLastNote: 0
 --- !u!1 &1438254494696508107
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,6 +599,7 @@ MonoBehaviour:
   perfectEffect: {fileID: 7744954063827632167, guid: f4ad4ee53343297499681b2974b43e79, type: 3}
   missEffect: {fileID: 8768379159205093994, guid: 1e3019706feba2f418f4f6ed8b83cda5, type: 3}
   hasMissed: 0
+  isLastNote: 0
 --- !u!1 &2342081940894605509
 GameObject:
   m_ObjectHideFlags: 0
@@ -714,6 +719,7 @@ MonoBehaviour:
   perfectEffect: {fileID: 7744954063827632167, guid: f4ad4ee53343297499681b2974b43e79, type: 3}
   missEffect: {fileID: 8768379159205093994, guid: 1e3019706feba2f418f4f6ed8b83cda5, type: 3}
   hasMissed: 0
+  isLastNote: 0
 --- !u!1 &2361704531775369433
 GameObject:
   m_ObjectHideFlags: 0
@@ -833,6 +839,7 @@ MonoBehaviour:
   perfectEffect: {fileID: 7744954063827632167, guid: f4ad4ee53343297499681b2974b43e79, type: 3}
   missEffect: {fileID: 8768379159205093994, guid: 1e3019706feba2f418f4f6ed8b83cda5, type: 3}
   hasMissed: 0
+  isLastNote: 0
 --- !u!1 &2410988622481946548
 GameObject:
   m_ObjectHideFlags: 0
@@ -952,6 +959,7 @@ MonoBehaviour:
   perfectEffect: {fileID: 7744954063827632167, guid: f4ad4ee53343297499681b2974b43e79, type: 3}
   missEffect: {fileID: 8768379159205093994, guid: 1e3019706feba2f418f4f6ed8b83cda5, type: 3}
   hasMissed: 0
+  isLastNote: 0
 --- !u!1 &2607575211101879006
 GameObject:
   m_ObjectHideFlags: 0
@@ -1071,6 +1079,7 @@ MonoBehaviour:
   perfectEffect: {fileID: 7744954063827632167, guid: f4ad4ee53343297499681b2974b43e79, type: 3}
   missEffect: {fileID: 8768379159205093994, guid: 1e3019706feba2f418f4f6ed8b83cda5, type: 3}
   hasMissed: 0
+  isLastNote: 1
 --- !u!1 &2640351638960208948
 GameObject:
   m_ObjectHideFlags: 0
@@ -1240,6 +1249,7 @@ MonoBehaviour:
   perfectEffect: {fileID: 7744954063827632167, guid: f4ad4ee53343297499681b2974b43e79, type: 3}
   missEffect: {fileID: 8768379159205093994, guid: 1e3019706feba2f418f4f6ed8b83cda5, type: 3}
   hasMissed: 0
+  isLastNote: 0
 --- !u!1 &2834190971396014602
 GameObject:
   m_ObjectHideFlags: 0
@@ -1359,6 +1369,7 @@ MonoBehaviour:
   perfectEffect: {fileID: 7744954063827632167, guid: f4ad4ee53343297499681b2974b43e79, type: 3}
   missEffect: {fileID: 8768379159205093994, guid: 1e3019706feba2f418f4f6ed8b83cda5, type: 3}
   hasMissed: 0
+  isLastNote: 0
 --- !u!1 &3636665719955205168
 GameObject:
   m_ObjectHideFlags: 0
@@ -1478,6 +1489,7 @@ MonoBehaviour:
   perfectEffect: {fileID: 7744954063827632167, guid: f4ad4ee53343297499681b2974b43e79, type: 3}
   missEffect: {fileID: 8768379159205093994, guid: 1e3019706feba2f418f4f6ed8b83cda5, type: 3}
   hasMissed: 0
+  isLastNote: 0
 --- !u!1 &3761933710430553166
 GameObject:
   m_ObjectHideFlags: 0
@@ -1597,6 +1609,7 @@ MonoBehaviour:
   perfectEffect: {fileID: 7744954063827632167, guid: f4ad4ee53343297499681b2974b43e79, type: 3}
   missEffect: {fileID: 8768379159205093994, guid: 1e3019706feba2f418f4f6ed8b83cda5, type: 3}
   hasMissed: 0
+  isLastNote: 0
 --- !u!1 &4876356498140326909
 GameObject:
   m_ObjectHideFlags: 0
@@ -1716,6 +1729,7 @@ MonoBehaviour:
   perfectEffect: {fileID: 7744954063827632167, guid: f4ad4ee53343297499681b2974b43e79, type: 3}
   missEffect: {fileID: 8768379159205093994, guid: 1e3019706feba2f418f4f6ed8b83cda5, type: 3}
   hasMissed: 0
+  isLastNote: 0
 --- !u!1 &5677014013755379053
 GameObject:
   m_ObjectHideFlags: 0
@@ -1835,6 +1849,7 @@ MonoBehaviour:
   perfectEffect: {fileID: 7744954063827632167, guid: f4ad4ee53343297499681b2974b43e79, type: 3}
   missEffect: {fileID: 8768379159205093994, guid: 1e3019706feba2f418f4f6ed8b83cda5, type: 3}
   hasMissed: 0
+  isLastNote: 0
 --- !u!1 &6249491488128747063
 GameObject:
   m_ObjectHideFlags: 0
@@ -1954,6 +1969,7 @@ MonoBehaviour:
   perfectEffect: {fileID: 7744954063827632167, guid: f4ad4ee53343297499681b2974b43e79, type: 3}
   missEffect: {fileID: 8768379159205093994, guid: 1e3019706feba2f418f4f6ed8b83cda5, type: 3}
   hasMissed: 0
+  isLastNote: 0
 --- !u!1 &6768566311580940007
 GameObject:
   m_ObjectHideFlags: 0
@@ -2073,6 +2089,7 @@ MonoBehaviour:
   perfectEffect: {fileID: 7744954063827632167, guid: f4ad4ee53343297499681b2974b43e79, type: 3}
   missEffect: {fileID: 8768379159205093994, guid: 1e3019706feba2f418f4f6ed8b83cda5, type: 3}
   hasMissed: 0
+  isLastNote: 0
 --- !u!1 &8562944173986154410
 GameObject:
   m_ObjectHideFlags: 0
@@ -2192,6 +2209,7 @@ MonoBehaviour:
   perfectEffect: {fileID: 7744954063827632167, guid: f4ad4ee53343297499681b2974b43e79, type: 3}
   missEffect: {fileID: 8768379159205093994, guid: 1e3019706feba2f418f4f6ed8b83cda5, type: 3}
   hasMissed: 0
+  isLastNote: 0
 --- !u!1 &8702892925162233993
 GameObject:
   m_ObjectHideFlags: 0
@@ -2311,6 +2329,7 @@ MonoBehaviour:
   perfectEffect: {fileID: 7744954063827632167, guid: f4ad4ee53343297499681b2974b43e79, type: 3}
   missEffect: {fileID: 8768379159205093994, guid: 1e3019706feba2f418f4f6ed8b83cda5, type: 3}
   hasMissed: 0
+  isLastNote: 0
 --- !u!1 &9145738836293765746
 GameObject:
   m_ObjectHideFlags: 0
@@ -2430,3 +2449,4 @@ MonoBehaviour:
   perfectEffect: {fileID: 7744954063827632167, guid: f4ad4ee53343297499681b2974b43e79, type: 3}
   missEffect: {fileID: 8768379159205093994, guid: 1e3019706feba2f418f4f6ed8b83cda5, type: 3}
   hasMissed: 0
+  isLastNote: 0

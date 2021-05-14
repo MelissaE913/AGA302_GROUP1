@@ -8,6 +8,7 @@ public class NoteObject : MonoBehaviour
     public KeyCode keyToPress;
     public GameObject hitEffect, goodEffect, perfectEffect, missEffect;
     public bool hasMissed = false;
+    public bool isLastNote = false;
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +43,9 @@ public class NoteObject : MonoBehaviour
                     GameManager.instance.PerfectHit();
                 }
                 gameObject.SetActive(false);
+
+                if(isLastNote)
+                    GameManager.instance.ReportLastNoteHit();
             }
         }
         else
@@ -51,6 +55,9 @@ public class NoteObject : MonoBehaviour
                 gameObject.SetActive(false);
                 GameManager.instance.NoteMissed();
                 Instantiate(missEffect, transform.position, missEffect.transform.rotation);
+
+                if (isLastNote)
+                    GameManager.instance.ReportLastNoteHit();
             }
         }
     }

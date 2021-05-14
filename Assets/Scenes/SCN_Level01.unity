@@ -253,13 +253,14 @@ MonoBehaviour:
   scorePerNote: 100
   scorePerPerfectNote: 150
   scorePerGoodNote: 125
+  currentProgress: 0
   totalNotes: 0
   normalHits: 0
   goodHits: 0
   perfectHits: 0
   missedHiits: 0
   rankVal: 
-  selectedSong: {fileID: 11400000, guid: 4d083519be4e4da4da2bb483805e0681, type: 2}
+  selectedSong: {fileID: 11400000, guid: 702f78a02e7f2a547ba62d65dd80a3da, type: 2}
 --- !u!4 &510893670
 Transform:
   m_ObjectHideFlags: 0
@@ -325,7 +326,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 78.9
+  field of view: 83
   orthographic: 0
   orthographic size: 3
   m_Depth: 0
@@ -494,6 +495,10 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 0.75
       objectReference: {fileID: 0}
+    - target: {fileID: 4374245672167658542, guid: b6d7ad41ddf8a864494393d197e792c0, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -6846038644488286620, guid: 764b63574f1db2d4dae9d48baabb07d6, type: 2}
     - target: {fileID: 4374245672469888906, guid: b6d7ad41ddf8a864494393d197e792c0, type: 3}
       propertyPath: m_Size.x
       value: 0.75
@@ -506,6 +511,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.65449
       objectReference: {fileID: 0}
+    - target: {fileID: 4374245672666676970, guid: b6d7ad41ddf8a864494393d197e792c0, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -1295585119137375449, guid: 764b63574f1db2d4dae9d48baabb07d6, type: 2}
     - target: {fileID: 4374245672705981548, guid: b6d7ad41ddf8a864494393d197e792c0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.88
@@ -678,18 +687,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7690535835256894905, guid: 3bfaaedcee607c144b63b04f524fd356, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7690535835346454804, guid: 3bfaaedcee607c144b63b04f524fd356, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.97
-      objectReference: {fileID: 0}
-    - target: {fileID: 7690535835346454804, guid: 3bfaaedcee607c144b63b04f524fd356, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7690535835346454804, guid: 3bfaaedcee607c144b63b04f524fd356, type: 3}
-      propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
