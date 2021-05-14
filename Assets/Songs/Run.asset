@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7ee98d3cc80ffaf49b29a474e6def692, type: 3}
-  m_Name: BabyShark
+  m_Name: Run
   m_EditorClassIdentifier: 
-  songName: Baby Shark Redux
+  songName: Run
   artist: 
-  duration: 30
-  musicClip: {fileID: 8300000, guid: 0bf57bb18ce0a8143b10cdb19995919e, type: 3}
+  duration: 120
+  musicClip: {fileID: 8300000, guid: 969deaa0557708146af5f349fc006ab0, type: 3}
   albumCover: {fileID: 21300000, guid: e11e012230491fb4ca48ad6677c3759e, type: 3}
-  songNotesPrefab: {fileID: 5267399822610157963, guid: 4c4fc91a70964a1438fc9f7fb98886e3, type: 3}
+  songNotesPrefab: {fileID: 2640351638960208948, guid: 91d9f2189844e5447bbd5f063c66bcd3, type: 3}
+  bpm: 120

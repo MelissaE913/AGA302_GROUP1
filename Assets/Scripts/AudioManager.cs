@@ -17,9 +17,6 @@ public class AudioManager : MonoBehaviour
     public enum SoundFXTypes
     {
         Default,
-        Jump,
-        PlayerHit,
-        EnemyHit,
         ButtonPress
     }
 
@@ -27,9 +24,6 @@ public class AudioManager : MonoBehaviour
     public struct SFXInfo
     {
         public AudioClip defaultAudio;
-        public AudioClip jumpAudio;
-        public AudioClip playerHitAudio;
-        public AudioClip enemyHitAudio;
         public AudioClip buttonPressAudio;
     }
 
@@ -82,15 +76,6 @@ public class AudioManager : MonoBehaviour
         {
             case SoundFXTypes.Default:
                 return sfxInfo.defaultAudio;
-                break;
-            case SoundFXTypes.Jump:
-                return sfxInfo.jumpAudio;
-                break;
-            case SoundFXTypes.PlayerHit:
-                return sfxInfo.playerHitAudio;
-                break;
-            case SoundFXTypes.EnemyHit:
-                return sfxInfo.enemyHitAudio;
                 break;
             case SoundFXTypes.ButtonPress:
                 return sfxInfo.buttonPressAudio;
