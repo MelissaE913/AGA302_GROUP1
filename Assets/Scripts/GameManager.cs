@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     public int scorePerNote = 100;
     public int scorePerPerfectNote = 150;
     public int scorePerGoodNote = 125;
+    public float currentProgress = 0f;
 
     public float totalNotes;
     public float normalHits;
@@ -67,9 +68,10 @@ public class GameManager : MonoBehaviour
         {
             case GamePhases.PlayPhase:
             case GamePhases.TutorialPlayPhase:
+
+                BeatScroller theBS = GameObject.FindObjectOfType<BeatScroller>();
                 if (Input.anyKeyDown)
                 {
-                    BeatScroller theBS = GameObject.FindObjectOfType<BeatScroller>();
                     if (theBS != null)
                     {
                         if (theBS.hasStarted == false)
@@ -87,8 +89,25 @@ public class GameManager : MonoBehaviour
                                 }
                             }
                         }
+                        else
+                        {
+                            
+                        }
                     }
 
+                    
+
+                }
+                if (theBS.hasStarted)
+                {
+                    float progress = 0f;
+                    GameObject musicObject = GameObject.FindGameObjectWithTag("MusicAudioSource");
+                    AudioSource musicAudioSource = musicObject.GetComponent<AudioSource>();
+                    if (musicAudioSource)
+                    {
+                        progress = musicAudioSource.time / musicAudioSource.clip.length;
+                        currentProgress = Mathf.Clamp(progress, 0f, 1f);
+                    }
                 }
                 break;
             case GamePhases.StartPhase:
@@ -121,6 +140,7 @@ public class GameManager : MonoBehaviour
                 break;
             case GamePhases.PlayPhase:
                 SceneManager.LoadScene(4);
+                currentProgress = 0f;
                 //shouldn't play music until the player hits a key
                 //Debug.Log("Play the music!");
                 //AudioManager.instance.PlayMusic(AudioManager.MusicTypes.Gameplay, true);
@@ -274,6 +294,11 @@ public class GameManager : MonoBehaviour
     {
         currentScore += scorePerNote * currentMultiplier;
         perfectHits++;
+    }
+    public void ReportLastNoteHit()
+    {
+        //record some information before we move onto...
+        SetNextPhase(GamePhases.ResultsPhase);
     }
 
     #endregion

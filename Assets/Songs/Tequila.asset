@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ee98d3cc80ffaf49b29a474e6def692, type: 3}
   m_Name: Tequila
   m_EditorClassIdentifier: 
-  songName: Tequila - Longer Title
+  songName: Tequila
   artist: John Wesley Tequila
   duration: 22
   musicClip: {fileID: 8300000, guid: de74c4b1c4348fa42899cdf98a5d15e5, type: 3}
