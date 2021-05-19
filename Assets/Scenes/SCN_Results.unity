@@ -420,6 +420,7 @@ MonoBehaviour:
   scorePerNote: 100
   scorePerPerfectNote: 150
   scorePerGoodNote: 125
+  currentProgress: 0
   totalNotes: 0
   normalHits: 0
   goodHits: 0
@@ -997,9 +998,6 @@ MonoBehaviour:
   musicAudioSource: {fileID: 1925121435}
   sfxInfo:
     defaultAudio: {fileID: 0}
-    jumpAudio: {fileID: 0}
-    playerHitAudio: {fileID: 0}
-    enemyHitAudio: {fileID: 0}
     buttonPressAudio: {fileID: 0}
   musicInfo:
     defaultAudio: {fileID: 0}
@@ -1017,7 +1015,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &426196105
 GameObject:
@@ -1695,63 +1693,51 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5458404832236548821, guid: f565a3488d4a84142a17f366c31c3202,
-        type: 3}
+    - target: {fileID: 5458404832236548821, guid: f565a3488d4a84142a17f366c31c3202, type: 3}
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 5458404832236548821, guid: f565a3488d4a84142a17f366c31c3202,
-        type: 3}
+    - target: {fileID: 5458404832236548821, guid: f565a3488d4a84142a17f366c31c3202, type: 3}
       propertyPath: m_LocalPosition.x
       value: 797.5165
       objectReference: {fileID: 0}
-    - target: {fileID: 5458404832236548821, guid: f565a3488d4a84142a17f366c31c3202,
-        type: 3}
+    - target: {fileID: 5458404832236548821, guid: f565a3488d4a84142a17f366c31c3202, type: 3}
       propertyPath: m_LocalPosition.y
       value: 413.12885
       objectReference: {fileID: 0}
-    - target: {fileID: 5458404832236548821, guid: f565a3488d4a84142a17f366c31c3202,
-        type: 3}
+    - target: {fileID: 5458404832236548821, guid: f565a3488d4a84142a17f366c31c3202, type: 3}
       propertyPath: m_LocalPosition.z
       value: 66.58923
       objectReference: {fileID: 0}
-    - target: {fileID: 5458404832236548821, guid: f565a3488d4a84142a17f366c31c3202,
-        type: 3}
+    - target: {fileID: 5458404832236548821, guid: f565a3488d4a84142a17f366c31c3202, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5458404832236548821, guid: f565a3488d4a84142a17f366c31c3202,
-        type: 3}
+    - target: {fileID: 5458404832236548821, guid: f565a3488d4a84142a17f366c31c3202, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5458404832236548821, guid: f565a3488d4a84142a17f366c31c3202,
-        type: 3}
+    - target: {fileID: 5458404832236548821, guid: f565a3488d4a84142a17f366c31c3202, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5458404832236548821, guid: f565a3488d4a84142a17f366c31c3202,
-        type: 3}
+    - target: {fileID: 5458404832236548821, guid: f565a3488d4a84142a17f366c31c3202, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5458404832236548821, guid: f565a3488d4a84142a17f366c31c3202,
-        type: 3}
+    - target: {fileID: 5458404832236548821, guid: f565a3488d4a84142a17f366c31c3202, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5458404832236548821, guid: f565a3488d4a84142a17f366c31c3202,
-        type: 3}
+    - target: {fileID: 5458404832236548821, guid: f565a3488d4a84142a17f366c31c3202, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5458404832236548821, guid: f565a3488d4a84142a17f366c31c3202,
-        type: 3}
+    - target: {fileID: 5458404832236548821, guid: f565a3488d4a84142a17f366c31c3202, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5458404832236548823, guid: f565a3488d4a84142a17f366c31c3202,
-        type: 3}
+    - target: {fileID: 5458404832236548823, guid: f565a3488d4a84142a17f366c31c3202, type: 3}
       propertyPath: m_Name
       value: PF_AudioManager
       objectReference: {fileID: 0}
@@ -1769,7 +1755,7 @@ GameObject:
   - component: {fileID: 1023746230}
   - component: {fileID: 1023746229}
   m_Layer: 5
-  m_Name: Text (1)
+  m_Name: SongTitle_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1848,7 +1834,7 @@ GameObject:
   - component: {fileID: 1069393434}
   - component: {fileID: 1069393433}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Difficulty_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2235,7 +2221,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1399310504}
-  - component: {fileID: 1399310503}
+  - component: {fileID: 1399310505}
   m_Layer: 0
   m_Name: ResultsUI
   m_TagString: Untagged
@@ -2243,18 +2229,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1399310503
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1399310502}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91d5908e9a4516d4c8ba4751af89f8b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1399310504
 Transform:
   m_ObjectHideFlags: 0
@@ -2270,6 +2244,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1399310505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399310502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d85171c9aaf60f4ebcbb8720845445f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  perfectText: {fileID: 1499894751}
+  goodText: {fileID: 1601815221}
+  missedText: {fileID: 695705689}
+  highComboText: {fileID: 1615161101}
+  scoreText: {fileID: 2043060218}
+  songTitleText: {fileID: 1023746229}
+  songDifficultyText: {fileID: 1069393433}
+  songIcon: {fileID: 974252008}
 --- !u!1 &1499894749
 GameObject:
   m_ObjectHideFlags: 0
@@ -2970,7 +2964,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1995541308
 GameObject:
@@ -3208,7 +3202,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1399310503}
+      - m_Target: {fileID: 1399310505}
         m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
         m_MethodName: OnPlayExitPressed
         m_Mode: 1
