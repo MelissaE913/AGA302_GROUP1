@@ -118,6 +118,53 @@ public class GameManager : MonoBehaviour
                 break;
         }
     }
+
+    public void SetPause(bool nextPause)
+    {
+        if (nextPause == true)
+        {
+            Time.timeScale = 0f;
+
+            if (currentGamePhase == GamePhases.PlayPhase)
+            {
+                BeatScroller theBS = GameObject.FindObjectOfType<BeatScroller>();
+                if (theBS != null)
+                {
+                    if (theBS.hasStarted)
+                    {
+                        GameObject musicObject = GameObject.FindGameObjectWithTag("MusicAudioSource");
+                        if (musicObject != null)
+                        {
+                            musicObject.GetComponent<AudioSource>().Pause();
+                        }
+                    }
+
+                }
+            }
+        }
+        else
+        {
+            Time.timeScale = 1f;
+
+            if (currentGamePhase == GamePhases.PlayPhase)
+            {
+                BeatScroller theBS = GameObject.FindObjectOfType<BeatScroller>();
+                if (theBS != null)
+                {
+                    if (theBS.hasStarted)
+                    {
+                        GameObject musicObject = GameObject.FindGameObjectWithTag("MusicAudioSource");
+                        if (musicObject != null)
+                        {
+                            musicObject.GetComponent<AudioSource>().UnPause();
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
     public void SetNextPhase(GamePhases nextPhase)
     {
         EndCurrentPhaseBehavior();
@@ -127,6 +174,8 @@ public class GameManager : MonoBehaviour
 
     void StartCurrentPhaseBehavior()
     {
+        SetPause(false);
+
         switch (currentGamePhase)
         {
             case GamePhases.StartPhase:

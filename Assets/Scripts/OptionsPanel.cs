@@ -11,6 +11,18 @@ public class OptionsPanel : MenuPanel
     float lastSFXTest = -3f;
     float sfxCooldown = 3f;
 
+    public override void OpenPanel()
+    {
+        base.OpenPanel();
+        GameManager.instance.SetPause(true);
+    }
+
+    public override void ClosePanel()
+    {
+        base.ClosePanel();
+        GameManager.instance.SetPause(false);
+    }
+
     public void OnSFXSliderChanged() 
     {
         float currentValue = sfxSlider.value;
