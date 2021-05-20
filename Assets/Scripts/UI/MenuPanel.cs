@@ -17,7 +17,7 @@ public class MenuPanel : MonoBehaviour
         gameObject.SetActive(true);
     }
 
-    public void ClosePanel()
+    public virtual void ClosePanel()
     {
         _isOpen = false;
         gameObject.SetActive(false);
