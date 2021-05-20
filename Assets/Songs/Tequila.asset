@@ -16,6 +16,6 @@ MonoBehaviour:
   artist: John Wesley Tequila
   duration: 22
   musicClip: {fileID: 8300000, guid: de74c4b1c4348fa42899cdf98a5d15e5, type: 3}
-  albumCover: {fileID: 21300000, guid: e11e012230491fb4ca48ad6677c3759e, type: 3}
+  albumCover: {fileID: 21300000, guid: 26f6cf97270970a4dac3cc8b0779be62, type: 3}
   songNotesPrefab: {fileID: 2640351638960208948, guid: adfdfde8608ea664ab089c7a8903319c, type: 3}
   bpm: 120
